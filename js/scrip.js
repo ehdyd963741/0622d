@@ -34,27 +34,27 @@ $(document).ready(function () {
   let mb_mainmenu = $('.mb-menu > li > a');
   let mb_submenu = $('.mb-submenu');
 
-  $.each(mb_mainmenu, function(index){
-    $(this).click(function(event){
+  $.each(mb_mainmenu, function (index) {
+    $(this).click(function (event) {
       // href 를 막아준다.
       event.preventDefault();
-     
+
       // 클릭하면 현재 포커스 클래스가 있는지 검토
       let temp = $(this).hasClass('mb-menu-focus');
 
-      if(temp) {
+      if (temp) {
         // 포커스 색상 적용해제
         $(this).removeClass('mb-menu-focus');
         // 아이콘 모션 해제
         $(this).removeClass('mb-icon-rot');
-        
+
         // 펼쳐진 해당 서브메뉴를 닫아준다.
         mb_submenu.eq(index).hide();
-      }else{
-        
+      } else {
+
         // 일단 모두 숨겨라
         mb_submenu.hide();
-        
+
         // 일단 모든 포커스 색상을 해제한다.
         mb_mainmenu.removeClass('mb-menu-focus');
 
@@ -62,7 +62,7 @@ $(document).ready(function () {
         mb_mainmenu.removeClass('mb-icon-rot');
 
         // 포커스 색상 적용하기
-        $(this).addClass('mb-menu-focus');          
+        $(this).addClass('mb-menu-focus');
         // 아이콘을 돌리자.    
         $(this).addClass('mb-icon-rot');
 
@@ -76,7 +76,7 @@ $(document).ready(function () {
   // 모바일 메뉴 보이기 기능
   let mb_dim = $('.mb-dim'); // 가림막
   let mb_bt = $('.mb-bt'); // 햄버거
-  mb_bt.click(function(event){
+  mb_bt.click(function (event) {
     // a 태그의 href 를 막는다.
     event.preventDefault();
     // 배경 보여주기
@@ -88,10 +88,10 @@ $(document).ready(function () {
   // 모바일 메뉴 숨기기 기능
   let mb_close = $('.mb-close');
   let mb_wrap = $('.mb-wrap');
-  mb_close.click(function(event){
+  mb_close.click(function (event) {
     // a 태그의 href 막아준다.
     event.preventDefault();
-    
+
     // 배경을 숨김다.
     mb_dim.hide();
 
@@ -104,10 +104,10 @@ $(document).ready(function () {
   });
 
   // 반응형 처리
-  $(window).resize(function(){
+  $(window).resize(function () {
     // 화면의 너비
     let temp = $(window).width();
-    if(temp > 760) {
+    if (temp > 760) {
       mb_dim.hide();
       mb_wrap.removeClass('mb-wrap-open');
       mb_mainmenu.removeClass('mb-menu-focus');
@@ -118,10 +118,10 @@ $(document).ready(function () {
 
   //위로가기 기능
   let go_top = $('.gotop');
-  go_top.click(function(){
+  go_top.click(function () {
     $('html').animate({
-      scrollTop:0
-    },1000);
+      scrollTop: 0
+    }, 1000);
 
   });
 

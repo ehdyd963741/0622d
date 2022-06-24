@@ -57,20 +57,22 @@ body {
   width: 100%;
   clear: both;
 }
+
 /* gotop 위로가기 */
-.gotop{
+.gotop {
   position: fixed;
   right: 20px;
   bottom: 50px;
   display: block;
   width: 50px;
   height: 50px;
-  background:url('../images/gotop.png') no-repeat center;
+  background: url('../images/gotop.png') no-repeat center;
   background-size: cover;
   border: 0;
   cursor: pointer;
   z-index: 999;
 }
+
 /* 모바일 메뉴 */
 .mb-bt {
   position: fixed;
@@ -146,10 +148,12 @@ body {
   background-color: #fff;
   transition: left 0.5s;
 }
+
 .mb-wrap-open {
   left: 0;
 
 }
+
 .mb-close {
   position: absolute;
   right: 20px;
@@ -224,14 +228,15 @@ body {
   transition: transform 0.5s;
 }
 
-.mb-icon-rot::after{
-  transform:translateY(-50%) rotate(180deg) !important;
+.mb-icon-rot::after {
+  transform: translateY(-50%) rotate(180deg) !important;
 }
 
 /* 포커스 유지 */
 .mb-menu-focus {
   color: #4abbc3 !important;
 }
+
 /* .mb-menu>li:hover>a {
   color: #4abbc3;
 }
@@ -493,7 +498,7 @@ body {
   .mb-dim {
     display: none;
   }
-  
+
 }
 
 @media all and (max-width: 700px) {
@@ -515,6 +520,7 @@ body {
   .gnb {
     display: none;
   }
+
   .mb-bt {
     display: block;
   }
